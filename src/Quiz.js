@@ -1,6 +1,8 @@
 import './Quiz.css';
 import moods from './moods.json'
 import React, { useState } from 'react';
+import PageTitle from './PageTitle'
+import PinkButton from './PinkButton'
 
 function Quiz() {
     const [chosenMood, setChosenMood] = useState(null);
@@ -10,7 +12,9 @@ function Quiz() {
     }
   
     return (
-      <div className='Quiz-container'>
+      <div className='wrapper'>
+      <PageTitle text="How are you feeling today?"/>
+         <div className='Quiz-container'>
         {moods.moods.map((mood) => (
           <div
             className={`mood-container ${chosenMood === mood.id ? 'chosen' : ''}`}
@@ -22,6 +26,9 @@ function Quiz() {
           </div>
         ))}
       </div>
+      <PinkButton text="Save"/>
+      </div>
+   
     )
   }
 export default Quiz;

@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import NavBar from './NavBar';
-import Base from './Base';
 import Quiz from './Quiz';
 import reportWebVitals from './reportWebVitals';
 

@@ -1,0 +1,14 @@
+.pink-button {
+    background-color: #F694C1; /* Green */
+    border: none;
+    color: white;
+    padding: 1rem 3rem;
+    text-align: center;
+    text-decoration: none;
+    display: block; 
+    margin: 1rem auto ;
+    font-size: 1rem;
+    border-radius: 2rem; 
+    font-family: 'Patrick Hand', cursive;
+
+  }
