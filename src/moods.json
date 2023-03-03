@@ -1,0 +1,65 @@
+
+{
+    "moods": [
+      {
+        "id": 1,
+        "name": "angry",
+        "pic": "../icons/angry.png"
+      },
+      {
+        "id": 2,
+        "name": "anxious",
+        "pic":"../icons/anxious.png"
+      },
+      {
+        "id": 3,
+        "name": "confused",
+        "pic": "../icons/confused.png"
+      },
+      {
+        "id": 4,
+        "name": "devastated",
+        "pic": "../icons/devastated.png"
+      },
+      {
+        "id": 5,
+        "name": "fantastic",
+        "pic": "../icons/fantastic.png"
+      },
+      {
+        "id": 6,
+        "name": "happy",
+        "pic": "../icons/happy.png"
+      },
+      {
+        "id": 7,
+        "name": "lonely",
+        "pic": "../icons/lonely.png"
+      },
+      {
+        "id": 8,
+        "name": "loved",
+        "pic": "../icons/loved.png"
+      },
+      {
+        "id": 9,
+        "name": "moody",
+        "pic": "../icons/moody.png"
+      },
+      {
+        "id": 10,
+        "name": "relaxed",
+        "pic": "../icons/relaxed.png"
+      },
+      {
+        "id": 11,
+        "name": "sad",
+        "pic": "../icons/sad.png"
+      },
+      {
+        "id": 12,
+        "name": "shocked",
+        "pic": "../icons/shocked.png"
+      }
+    ]
+  }

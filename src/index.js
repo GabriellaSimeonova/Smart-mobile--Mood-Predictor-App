@@ -2,14 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import NavBar from './NavBar';
-import Input from './Input';
+import Base from './Base';
+import Quiz from './Quiz';
 import reportWebVitals from './reportWebVitals';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Input />
+    <Quiz />
    <NavBar/>
   </React.StrictMode>
 );
