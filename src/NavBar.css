@@ -1,0 +1,28 @@
+:root{
+  --pink: #F694C1;
+}
+
+.navbar{
+  background-color: whitesmoke;
+  height: 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  font-size: 1rem;
+  padding: 0.2rem;
+}
+
+.navbar > div >  img{
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: 0.5rem;
+}
+.current{
+  background-color: var(--pink);
+  border-radius: 100%;
+}
+
