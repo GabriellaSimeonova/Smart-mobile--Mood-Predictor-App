@@ -26,7 +26,7 @@ function Quiz() {
           </div>
         ))}
       </div>
-      <PinkButton text="Save"/>
+      <PinkButton text="Save" smalltext="Skip..." />
       </div>
    
     )
