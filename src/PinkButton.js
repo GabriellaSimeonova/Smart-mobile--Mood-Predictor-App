@@ -6,7 +6,7 @@ function PinkButton(props) {
 
   return(
     <>
-    <button className='pink-button' onClick={console.log('click')}>
+    <button className='pink-button'>
         {props.text}
     </button>
     <p className='small-text'>{props.smalltext}</p>

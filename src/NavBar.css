@@ -21,8 +21,15 @@
   width: 1.5rem;
   padding: 0.5rem;
 }
+
 .current{
   background-color: var(--pink);
   border-radius: 100%;
 }
 
+div > a{
+  display: flex;
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: 0.4rem;
+}
