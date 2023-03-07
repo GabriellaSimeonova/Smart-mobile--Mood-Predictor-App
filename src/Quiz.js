@@ -1,12 +1,13 @@
 import './Quiz.css';
 import moods from './moods.json'
 import React, { useState } from 'react';
-import PageTitle from './PageTitle'
-import PinkButton from './PinkButton'
+import PageTitle from './PageTitle';
+import PinkButton from './PinkButton';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Quiz() {
     const [chosenMood, setChosenMood] = useState(null);
-  
+    const navigate = useNavigate();
     const handleMoodClick = (mood) => {
       setChosenMood(mood.id);
     }
@@ -26,7 +27,8 @@ function Quiz() {
           </div>
         ))}
       </div>
-      <PinkButton text="Save" smalltext="Skip..." />
+      <button className="pink-button"  onClick={() => navigate("/Camera")}>Save</button>
+      <p className='small-text' onClick={() => navigate("/Camera")}>Skip...</p>
       </div>
    
     )

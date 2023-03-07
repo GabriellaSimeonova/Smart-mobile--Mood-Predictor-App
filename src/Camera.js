@@ -21,8 +21,8 @@ function Camera() {
 
   return (
     <div>
-      <PageTitle text="Capture Your Mood"/>
       <div className='webcam-wrapper'>
+      <PageTitle text="Capture Your Mood"/>
       {pictureTaken ? (
         <img className="taken-image" src={capturedImage} alt="Captured" />
       ) : (
@@ -42,6 +42,7 @@ function Camera() {
       ) : (
         <button className="pink-button" onClick={capture}>Take a picture</button>
       )}
+       <button className="pink-button">Save</button>
       </div>
     </div>
   );

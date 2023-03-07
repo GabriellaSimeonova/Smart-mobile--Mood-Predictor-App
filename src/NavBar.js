@@ -28,7 +28,7 @@ function NavBar() {
     </div>
 
     <div id="camera" className={currentItem  === 'camera' ? 'current' : ''} onClick={() => handleClick('camera')}>
-    <Link to={'/Camera'}><img  src={camera} alt="My Icon" /></Link>
+    <img  src={camera} alt="My Icon" />
     </div>
   </nav>
 )
