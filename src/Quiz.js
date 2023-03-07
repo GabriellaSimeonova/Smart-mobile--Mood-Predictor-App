@@ -10,13 +10,14 @@ function Quiz() {
     const navigate = useNavigate();
     const handleMoodClick = (mood) => {
       setChosenMood(mood.id);
-      localStorage.setItem("clickedMood", mood.id)
+      localStorage.setItem("clickedMoodID", mood.id)
     }
   
     return (
       <div className='wrapper'>
       <PageTitle text="How are you feeling today?"/>
          <div className='Quiz-container'>
+
         {moods.moods.map((mood) => (
           <div
             className={`mood-container ${chosenMood === mood.id ? 'chosen' : ''}`}
@@ -27,6 +28,7 @@ function Quiz() {
             <img className='moodPic' src={mood.pic} alt={mood.name} />
           </div>
         ))}
+        
       </div>
       <button className="pink-button"  onClick={() => navigate("/Camera")}>Save</button>
       <p className='small-text' onClick={() => navigate("/Camera")}>Skip...</p>

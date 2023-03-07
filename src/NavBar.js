@@ -24,7 +24,7 @@ function NavBar() {
     </div>
     
     <div id="bulb" className={currentItem  === 'bulb' ? 'current' : ''} onClick={() => handleClick('bulb')}>
-    <img  src={bulb} alt="My Icon" />
+    <Link to={'/SuggestMenu'}>  <img  src={bulb} alt="My Icon" /></Link>
     </div>
 
     <div id="camera" className={currentItem  === 'camera' ? 'current' : ''} onClick={() => handleClick('camera')}>
