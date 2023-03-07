@@ -23,28 +23,28 @@
       },
       {
         "id": 5,
-        "name": "fantastic",
-        "pic": "../icons/fantastic.png"
-      },
-      {
-        "id": 6,
-        "name": "happy",
-        "pic": "../icons/happy.png"
-      },
-      {
-        "id": 7,
         "name": "lonely",
         "pic": "../icons/lonely.png"
       },
       {
+        "id": 6,
+        "name": "sad",
+        "pic": "../icons/sad.png"
+      },
+      {
+        "id": 7,
+        "name": "shocked",
+        "pic": "../icons/shocked.png"
+      },
+      {
         "id": 8,
-        "name": "loved",
-        "pic": "../icons/loved.png"
+        "name": "moody",
+        "pic": "../icons/moody.png"
       },
       {
         "id": 9,
-        "name": "moody",
-        "pic": "../icons/moody.png"
+        "name": "loved",
+        "pic": "../icons/loved.png"
       },
       {
         "id": 10,
@@ -53,13 +53,13 @@
       },
       {
         "id": 11,
-        "name": "sad",
-        "pic": "../icons/sad.png"
+        "name": "happy",
+        "pic": "../icons/happy.png"
       },
       {
         "id": 12,
-        "name": "shocked",
-        "pic": "../icons/shocked.png"
+        "name": "fantastic",
+        "pic": "../icons/fantastic.png"
       }
     ]
   }

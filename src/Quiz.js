@@ -10,6 +10,7 @@ function Quiz() {
     const navigate = useNavigate();
     const handleMoodClick = (mood) => {
       setChosenMood(mood.id);
+      localStorage.setItem("clickedMood", mood.id)
     }
   
     return (

@@ -43,6 +43,7 @@ function Camera() {
         <button className="pink-button" onClick={capture}>Take a picture</button>
       )}
        <button className="pink-button">Save</button>
+       <p className='small-text'> Skip...</p>
       </div>
     </div>
   );
