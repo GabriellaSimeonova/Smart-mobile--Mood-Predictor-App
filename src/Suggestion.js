@@ -20,7 +20,7 @@ function Suggestion() {
       contentJSX = (
         <div>
           <h2>Here's a meme for you:</h2>
-          <img src={memes[0].url} alt="Meme" />
+          <img src={memes[getRandomIndex(3)].url} alt="Meme" />
         </div>
       );
       break;
