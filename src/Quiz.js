@@ -2,8 +2,8 @@ import './Quiz.css';
 import moods from './moods.json'
 import React, { useState } from 'react';
 import PageTitle from './PageTitle';
+import { useNavigate } from 'react-router-dom';
 import PinkButton from './PinkButton';
-import { Link, useNavigate } from 'react-router-dom';
 
 function Quiz() {
     const [chosenMood, setChosenMood] = useState(null);

@@ -1,0 +1,65 @@
+{
+    "memes": [
+      {
+        "url": "https://www.wyzowl.com/wp-content/uploads/2022/04/img_624d8246ab769.jpg"
+      },
+      {
+        "url": "https://static.boredpanda.com/blog/wp-content/uploads/2015/10/funny-game-of-thrones-memes-fb__700.jpg"
+
+      },
+      {
+        "url":  "https://cdn.vox-cdn.com/thumbor/56kmAxOk_6ZOuUVRilR9dwb1Xf8=/0x0:735x500/1400x1400/filters:focal(368x250:369x251)/cdn.vox-cdn.com/uploads/chorus_asset/file/19933026/image.png"
+      }
+    ],
+
+    "quotes": [
+      {
+        "url": "Learn as if you will live forever, live like you will die tomorrow."
+      },
+      {
+        "url": "Success is not final; failure is not fatal: It is the courage to continue that counts."
+
+      },
+      {
+        "url": "Success is getting what you want, happiness is wanting what you get."
+      }
+    ],
+    
+    "meditation": [
+      {
+        "url": "Focus your attention on the breath and on how the body moves with each inhalation and exhalation."
+      },
+      {
+        "url": "Make no effort to control the breath; simply breathe naturally."
+
+      },
+      {
+        "url": "Sit or lie comfortably and close your eyes."
+      }
+    ],
+    "healthyHabit": [
+      {
+        "url": "Eat one piece of fruit."
+      },
+      {
+        "url": "Do 25 sit ups."
+
+      },
+      {
+        "url": "Drink a gallon of water."
+      }
+    ],
+    "music": [
+      {
+        "url": "https://www.youtube.com/embed/CiwMDFh_Rog"
+      },
+      {
+        "url": "https://www.youtube.com/embed/ZKbDlbv89bs"
+
+      },
+      {
+        "url": "https://www.youtube.com/embed/n2fHsOik4Fc"
+      }
+    ]
+  }
+  

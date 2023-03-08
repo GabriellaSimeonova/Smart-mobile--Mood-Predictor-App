@@ -4,10 +4,9 @@ import plus from './resources/icons/plus.png';
 import stats from './resources/icons/stats.png';
 import camera from './resources/icons/camera.png';
 import bulb from './resources/icons/bulb.png';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function NavBar() {
-  const navigate = useNavigate();
   const [currentItem, setCurrentItem] = useState(null);
   const handleClick = (item) => {
     setCurrentItem(item);
