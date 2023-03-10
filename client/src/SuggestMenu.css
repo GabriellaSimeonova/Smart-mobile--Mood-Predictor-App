@@ -1,0 +1,29 @@
+.suggestPic{
+    height: 10rem;
+    width: 10rem;
+}
+
+.suggestor-wrapper{
+    display: flex;
+    width: 100vw;
+    height: 80vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: azure;
+}
+
+.others-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.suggestor-text{
+    text-align: center;
+}
+
+.otherbtn{
+    font-size: 0.9rem;
+    padding: 0.3rem 2rem;
+}

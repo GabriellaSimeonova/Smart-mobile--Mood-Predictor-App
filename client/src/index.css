@@ -8,6 +8,7 @@ body {
   overflow-y: hidden;
   width: 100vw;
   height: 100vh;
+  color: white;
   background-image: radial-gradient(circle, #f694c1, #ffa3a5, #fdba98, #edd09f, #dce4b7, #c8ebc7, #b9f0dc, #b2f3f2, #9eeaff, #ace0ff, #c5d2ff, #e4c1f9);
 
 }
