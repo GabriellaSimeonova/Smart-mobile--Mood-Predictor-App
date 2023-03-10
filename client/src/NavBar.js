@@ -30,6 +30,11 @@ function NavBar() {
     <div id="camera" className={currentItem  === 'camera' ? 'current' : ''} onClick={() => handleClick('camera')}>
     <img  src={camera} alt="My Icon" />
     </div>
+
+    <div id="camera1" className={currentItem  === 'camera1' ? 'current' : ''} onClick={() => handleClick('camera1')}>
+    <img  src={camera} alt="My Icon" />
+    <Link to={'/Gallery'}/>
+    </div>
   </nav>
 )
 }

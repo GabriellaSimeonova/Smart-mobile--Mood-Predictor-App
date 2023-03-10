@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import PageTitle from './PageTitle';
 import PinkButton from './PinkButton';
 import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 function Quiz() {
     const [chosenMood, setChosenMood] = useState(null);
@@ -12,6 +13,19 @@ function Quiz() {
       setChosenMood(mood.id);
       localStorage.setItem("clickedMood", mood.id)
     }
+
+    //register the mood and the date in the db
+    const registerMoodDb = async (mood) => {
+      try {
+        const response = await axios.post('http://localhost:5000/mood', {
+          moodName: mood.name,
+          dateOfRegistration: new Date().toISOString(),
+        });
+        console.log(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
   
     return (
       <div className='wrapper'>
