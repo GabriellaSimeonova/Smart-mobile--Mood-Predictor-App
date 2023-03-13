@@ -10,3 +10,8 @@
 .taken-image {
     margin: 2rem;
 }
+
+.webcam-wrapper >img{
+    height: 35%;
+    width: 65%;
+}
