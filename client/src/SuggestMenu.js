@@ -4,7 +4,10 @@ import moods from './moods.json';
 import {useNavigate } from 'react-router-dom';
 
 function SuggestMenu() {
-  const id = localStorage.getItem("clickedMoodID"); // get the id value from localStorage
+  let id = 10
+  if(localStorage.getItem("clickedMoodID")){
+    id = localStorage.getItem("clickedMoodID"); // get the id value from localStorage
+  }
   const navigate = useNavigate();
   const mood = moods.moods.find((el) => el.id === parseInt(id));
 
@@ -16,13 +19,15 @@ function SuggestMenu() {
   let moodText;
   let mainOption;
   let otherOptions = ["Music", "Meditation", "Healthy Habit", "Quote", "Meme"];
-  if (mood.id >= 9) {
-    moodText = "Boost your good mood even more with";
-    mainOption = "Meme"
-  } else {
-    moodText = "Fix your bad mood with";
-    mainOption = "Quote";
-  }
+
+    if (mood.id >= 9) {
+      moodText = "Boost your good mood even more with";
+      mainOption = "Meme"
+    } else {
+      moodText = "Fix your bad mood with";
+      mainOption = "Quote";
+    }
+
 
   return (
     <div className='suggestor-wrapper'>

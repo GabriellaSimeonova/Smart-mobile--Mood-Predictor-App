@@ -1,4 +1,3 @@
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -23,7 +22,6 @@ function App() {
           <Route path='/Camera' element={<Camera />} />
           <Route path='/Quiz' element={<Quiz />} />
           <Route path='/Gallery' element={<GalleryView/>}/>
-          <Route path='/Statistics' element={<StatisticsView/>}/>
           <Route path='/SuggestMenu' element={<SuggestMenu />} />
           <Route path='/Suggestion' element={<Suggestion />} />
           <Route path='/Offline' element={<Offline />} />

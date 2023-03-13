@@ -1,8 +1,10 @@
 const CACHE_NAME = "my-react-pwa-cache";
 const urlsToCache = [
-  "/",
-  "/index.html",
-  "/manifest.json",
+  "./offline.html",
+  "./index.css",
+  "./offline.css",
+  './icons/offline.png',
+  './512x512.png'
   // add other static assets to cache
 ];
 
@@ -14,13 +16,17 @@ self.addEventListener("install", (event) => {
   );
 });
 
-self.addEventListener("fetch", (event) => {
+self.addEventListener('fetch', (event) => {
   event.respondWith(
-    caches.match(event.request).then((response) => {
-      if (response) {
-        return response;
+    caches.match(event.request).then((cachedResponse) => {
+      console.log('Service Worker: Fetching resource ' + event.request.url);
+      if (navigator.onLine) {
+        // Return the network response when online
+        return fetch(event.request);
+      } else {
+        // Return the cached offline.html when offline
+        return cachedResponse || caches.match('/offline.html');
       }
-      return fetch(event.request);
     })
   );
 });
