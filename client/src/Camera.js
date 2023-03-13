@@ -1,6 +1,5 @@
 import './Camera.css';
 import React, { useState, useRef } from 'react';
-import axios from 'axios';
 import Webcam from 'react-webcam';
 import PageTitle from './PageTitle';
 
@@ -19,34 +18,6 @@ function Camera() {
     setPictureTaken(false);
     setCapturedImage(null);
   };
-
-  const saveImgToDb = async () => {
-    if (capturedImage) {
-      try {
-        const response = await axios.post('http://localhost:5000/image', {
-          image: Buffer.from(capturedImage.split(',')[1], 'base64'),
-          date: new Date().toISOString(),
-        });
-        console.log(response.data); 
-      } catch (err) {
-        console.error(err);
-      }
-    }
-  };
-  // const saveImgToDb = () => {
-  //   if (capturedImage) {
-  //     try {
-  //       const response ={
-  //         image: Buffer.from(capturedImage.split(',')[1], 'base64'),
-  //         date: new Date().toISOString(),
-  //       };
-  //       console.log(response.data); 
-  //     } catch (err) {
-  //       console.error(err);
-  //     }
-  //   }
-  // };
-  
 
   return (
     <div>
@@ -71,7 +42,7 @@ function Camera() {
       ) : (
         <button className="pink-button" onClick={capture}>Take a picture</button>
       )}
-       <button className="pink-button"onClick={saveImgToDb}>Save</button>
+       <button className="pink-button">Save</button>
        <p className='small-text'> Skip...</p>
       </div>
     </div>

@@ -14,7 +14,7 @@ function NavBar() {
   };
 
   return(
-  <nav className='navbar'>
+    <nav className='navbar'>
     <div id="plus" className={currentItem  === 'plus' ? 'current' : ''} onClick={() => handleClick('plus')}>
    <Link to={'/Quiz'}> <img   src={plus} alt="My Icon" /></Link>
     </div>
@@ -24,11 +24,11 @@ function NavBar() {
     </div>
     
     <div id="bulb" className={currentItem  === 'bulb' ? 'current' : ''} onClick={() => handleClick('bulb')}>
-    <img  src={bulb} alt="My Icon" />
+    <Link to={'/SuggestMenu'}>  <img  src={bulb} alt="My Icon" /></Link>
     </div>
 
     <div id="camera" className={currentItem  === 'camera' ? 'current' : ''} onClick={() => handleClick('camera')}>
-    <Link to={'/Gallery'}> <img   src={camera} alt="My Icon" /></Link>
+    <Link to={'/Gallery'}>  <img  src={camera} alt="My Icon" /></Link>
     </div>
   </nav>
 )
