@@ -1,4 +1,3 @@
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -11,6 +10,7 @@ import GalleryView from './views/GalleryView';
 import StatisticsView from './views/StatisticsView';
 import SuggestMenu from './SuggestMenu';
 import Suggestion from './Suggestion';
+import Offline from './Offline'
 
 function App() {
   return (
@@ -22,9 +22,10 @@ function App() {
           <Route path='/Camera' element={<Camera />} />
           <Route path='/Quiz' element={<Quiz />} />
           <Route path='/Gallery' element={<GalleryView/>}/>
-          <Route path='/Statistics' element={<StatisticsView/>}/>
           <Route path='/SuggestMenu' element={<SuggestMenu />} />
           <Route path='/Suggestion' element={<Suggestion />} />
+          <Route path='/Offline' element={<Offline />} />
+
         </Routes>
       </BrowserRouter>
   );
