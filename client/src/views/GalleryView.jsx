@@ -17,6 +17,12 @@ const GalleryWrapper = styled.div`
   justify-content: center;
 `;
 
+const PhotoCardWrapper = styled.div`
+  flex-basis: 33.33%; /* for larger screens, display 3 pictures per row */
+  @media screen and (max-width: 768px) {
+    flex-basis: 50%; /* for smaller screens like phones, display 2 pictures per row */
+  }
+`;
 
 export default function PhotoGallery() {
   const [cards, setCards] = useState([
@@ -29,11 +35,14 @@ export default function PhotoGallery() {
     <GalleryContainer>
       <GalleryWrapper>
         {cards.map((card) => (
-          <PhotoCard key={card.id} img={card.img} mood={card.mood} />
+          <PhotoCardWrapper key={card.id}>
+            <PhotoCard img={card.img} mood={card.mood} />
+          </PhotoCardWrapper>
         ))}
       </GalleryWrapper>
     </GalleryContainer>
   );
 }
+
 
 

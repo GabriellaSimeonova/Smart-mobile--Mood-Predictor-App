@@ -53,6 +53,7 @@ const ParcentageContainer = styled.div`
   flex-direction: row;
   align-items: stretch;
   justify-content: center;
+  gap:5%;
 `;
 
 const PracentageWrapper = styled.div`
