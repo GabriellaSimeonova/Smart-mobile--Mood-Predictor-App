@@ -25,7 +25,7 @@ function App() {
           <Route path='/SuggestMenu' element={<SuggestMenu />} />
           <Route path='/Suggestion' element={<Suggestion />} />
           <Route path='/Offline' element={<Offline />} />
-
+          <Route path='/Statistics' element={<StatisticsView/>}/>
         </Routes>
       </BrowserRouter>
   );

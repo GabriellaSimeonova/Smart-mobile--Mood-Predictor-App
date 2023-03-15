@@ -5,7 +5,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Patrick Hand', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-y: hidden;
+  overflow-y: scroll;
   width: 100vw;
   height: 100vh;
   background-image: radial-gradient(circle, #f694c1, #ffa3a5, #fdba98, #edd09f, #dce4b7, #c8ebc7, #b9f0dc, #b2f3f2, #9eeaff, #ace0ff, #c5d2ff, #e4c1f9);

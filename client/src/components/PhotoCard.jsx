@@ -1,6 +1,18 @@
 import React, { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import styled from 'styled-components';
+import angry from '../resources/icons/angry.png';
+import anxious from '../resources/icons/anxious.png';
+import confused from '../resources/icons/devastated.png';
+import devastated from '../resources/icons/confused.png';
+import lonely from '../resources/icons/lonely.png';
+import sad from '../resources/icons/sad.png';
+import shocked from '../resources/icons/shocked.png';
+import moody from '../resources/icons/moody.png';
+import loved from '../resources/icons/loved.png';
+import relaxed from '../resources/icons/relaxed.png';
+import happy from '../resources/icons/happy.png';
+import fantastic from '../resources/icons/fantastic.png';
 
 const StyledCard = styled(Card)`
   position: relative;
@@ -66,6 +78,12 @@ const Emoji = styled.img`
 `;
 
 export default function PhotoCard({ img, mood }) {
+  const getImage = (name) => {
+    const image = pics.find(pic => pic.includes(name));
+    return image ? image : '';
+  }
+  const pics = [angry, anxious, confused, devastated, lonely, sad, shocked, moody, loved, happy, fantastic, relaxed];
+
   const [flipped, setFlipped] = useState(false);
   const handleClick = () => setFlipped(!flipped);
 
@@ -81,7 +99,7 @@ export default function PhotoCard({ img, mood }) {
       <CardBack style={{ visibility: flipped ? 'visible' : 'hidden' }}>
         {flipped && (
           <div style={{ transform: 'rotateY(180deg)' }}>
-            <Emoji src={`../icons/${mood}.png`} alt="Emoji" flipped={flipped} />
+            <Emoji src={getImage(mood)} alt="Emoji" flipped={flipped} />
           </div>
         )}
         <TextMood flipped={flipped}>{mood}</TextMood>
