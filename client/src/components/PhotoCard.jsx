@@ -101,28 +101,3 @@ const Emoji = styled.img`
     transform: rotateY(180deg);
   `}
 `;
-
-export default function PhotoCard({ img, mood }) {
-  const [flipped, setFlipped] = useState(false);
-  const handleClick = () => setFlipped(!flipped);
-
-  return (
-    <StyledCard
-      style={{ width: '18rem', height: '18rem' }}
-      flipped={flipped}
-      onClick={handleClick}
-    >
-      <CardFront>
-        <Image variant="top" src={img} />
-      </CardFront>
-      <CardBack style={{ visibility: flipped ? 'visible' : 'hidden' }}>
-        {flipped && (
-          <div style={{ transform: 'rotateY(180deg)' }}>
-            <Emoji src={`../icons/${mood}.png`} alt="Emoji" flipped={flipped} />
-          </div>
-        )}
-        <TextMood flipped={flipped}>{mood}</TextMood>
-      </CardBack>
-    </StyledCard>
-  );
-}
