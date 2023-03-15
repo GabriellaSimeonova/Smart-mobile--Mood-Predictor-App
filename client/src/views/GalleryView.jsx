@@ -1,24 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import Jabi from '../resources/pics/Jabi_San.jpg';
-import Fashionista from '../resources/pics/Fashionista.jpeg';
-import Jabimodo from '../resources/pics/Jabimodo.jpeg';
-
+import axios from 'axios';
 import PhotoCard from '../components/PhotoCard';
 
 export default function PhotoGallery() {
-  const [cards, setCards] = useState([
-    { id: 1, img: Jabi, mood: 'relaxed' },
-    { id: 2, img: Fashionista, mood: 'happy' },
-    { id: 3, img: Jabimodo, mood: 'sad' },
-  ]);
+  const [pics, setPics] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = JSON.parse(localStorage.getItem('image'));
+        setPics([response]);
+      } catch (error) {
+        console.error('Error loading cards:', error);
+      }
+    }
+    fetchData();
+  }, []);
 
   return (
     <GalleryContainer>
       <GalleryWrapper>
-        {cards.map((card) => (
-          <PhotoCardWrapper key={card.id}>
-            <PhotoCard img={card.img} mood={card.mood} />
+        {pics.map((pic, index) => (
+          <PhotoCardWrapper key={index}>
+            <PhotoCard img={pic.image} mood={pic.moodName} />
           </PhotoCardWrapper>
         ))}
       </GalleryWrapper>
@@ -43,4 +48,3 @@ const PhotoCardWrapper = styled.div`
     flex-basis: 50%; /* for smaller screens like phones, display 2 pictures per row */
   }
 `;
-

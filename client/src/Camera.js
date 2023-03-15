@@ -1,4 +1,5 @@
 import './Camera.css';
+import axios from 'axios';
 import React, { useState, useRef, useEffect } from 'react';
 import PageTitle from './PageTitle';
 
@@ -90,6 +91,18 @@ function Camera() {
       });
   };
 
+  const savePicture = () => {
+    try{
+        localStorage.setItem('image',JSON.stringify({
+        image:capturedImage,
+        moodName: 'sad',
+      }))
+      console.log('Ok!Its working');
+    }catch(err){
+      console.error('Failed to save picture:', err);
+    }
+  };
+
   return (
     <div>
       <div className='webcam-wrapper'>
@@ -114,7 +127,9 @@ function Camera() {
             Take a picture
           </button>
         )}
-        <button className="pink-button">Save</button>
+        <button className="pink-button" onClick={savePicture}>
+          Save
+        </button>
         <p className='small-text'> Skip...</p>
         <canvas ref={canvasRef} style={{ display: 'none' }} />
       </div>
