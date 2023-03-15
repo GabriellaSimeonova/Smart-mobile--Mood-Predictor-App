@@ -1,4 +1,4 @@
-import './Offline.css';
+
 import React, { useState } from 'react';
 import offlineIcon from './resources/icons/offline.png'
 

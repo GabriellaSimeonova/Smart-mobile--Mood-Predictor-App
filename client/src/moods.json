@@ -4,7 +4,7 @@
       {
         "id": 1,
         "name": "angry",
-        "pic": "../icons/angry.png"
+        "pic": "./resources/icons/angry.png"
       },
       {
         "id": 2,
