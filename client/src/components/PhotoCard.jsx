@@ -17,7 +17,11 @@ import fantastic from '../resources/icons/fantastic.png';
 export default function PhotoCard({ img, mood }) {
   const [flipped, setFlipped] = useState(false);
   const handleClick = () => setFlipped(!flipped);
-
+  const getImage = (name) => {
+    const image = pics.find(pic => pic.includes(name));
+    return image ? image : '';
+  }
+  const pics = [angry, anxious, confused, devastated, lonely, sad,moody, loved, happy, fantastic, relaxed];
   return (
     <StyledCard
       style={{ width: '18rem', height: '18rem' }}
@@ -30,7 +34,7 @@ export default function PhotoCard({ img, mood }) {
       <CardBack style={{ visibility: flipped ? 'visible' : 'hidden' }}>
         {flipped && (
           <div style={{ transform: 'rotateY(180deg)' }}>
-            <Emoji src={`../icons/${mood}.png`} alt="Emoji" flipped={flipped} />
+            <Emoji src={getImage(mood)} alt="Emoji" flipped={flipped} />
           </div>
         )}
         <TextMood flipped={flipped}>{mood}</TextMood>
