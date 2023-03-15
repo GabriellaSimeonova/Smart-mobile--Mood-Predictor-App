@@ -8,10 +8,12 @@
 }
 
 .taken-image {
-    margin: 2rem;
+    -webkit-transform: scaleX(-1);
+    height: 35%;
+    width: 80%;
 }
 
-.webcam-wrapper >img{
-    height: 35%;
-    width: 65%;
+video{
+    -webkit-transform: scaleX(-1);
+    
 }
