@@ -1,6 +1,6 @@
 import './Camera.css';
 import axios from 'axios';
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, cloneElement } from 'react';
 import PageTitle from './PageTitle';
 
 function Camera() {
@@ -68,11 +68,33 @@ function Camera() {
     });
     videoRef.current.srcObject = null;
   }
+  const addImageInLocalStorage = (image, mood) => {
+    try {
+      // Retrieve the existing collection from local storage or initialize an empty one
+      let collection = [];
+      if (localStorage.getItem("images")) {
+        collection = JSON.parse(localStorage.getItem("images"));
+      }
+  
+      // Add the new image and mood to the collection
+      if (image && mood) {
+        collection.push({ image, moodName: mood });
+  
+        // Save the updated collection to local storage
+        localStorage.setItem("images", JSON.stringify(collection));
+      } else {
+        console.error("Invalid image or mood parameter");
+      }
+    } catch (error) {
+      console.error("Error adding image to local storage", error);
+    }
+  };
+  
 
   const capture = () => {
     const context = canvasRef.current.getContext('2d');
     context.drawImage(videoRef.current, 0, 0, canvasRef.current.width, canvasRef.current.height);
-    const imageSrc = canvasRef.current.toDataURL('image/jpeg');
+    const imageSrc = canvasRef.current.toDataURL('image/jpeg',1.0);
     setCapturedImage(imageSrc);
     setPictureTaken(true);
     stopCamera();
@@ -93,10 +115,7 @@ function Camera() {
 
   const savePicture = () => {
     try{
-        localStorage.setItem('image',JSON.stringify({
-        image:capturedImage,
-        moodName: 'sad',
-      }))
+      addImageInLocalStorage(capturedImage,localStorage.getItem('clickedMoodName'));
       console.log('Ok!Its working');
     }catch(err){
       console.error('Failed to save picture:', err);
@@ -113,7 +132,7 @@ function Camera() {
           <video
             ref={videoRef}
             width={350}
-            height={350}
+            height={460}
             autoPlay
             playsInline
           />

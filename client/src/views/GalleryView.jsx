@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import axios from 'axios';
+import sadCappy from '../resources/icons/sad.png'
 import PhotoCard from '../components/PhotoCard';
 
 export default function PhotoGallery() {
@@ -9,8 +9,8 @@ export default function PhotoGallery() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = JSON.parse(localStorage.getItem('image'));
-        setPics([response]);
+        const response = JSON.parse(localStorage.getItem('images'));
+        setPics(response);
       } catch (error) {
         console.error('Error loading cards:', error);
       }
@@ -21,11 +21,18 @@ export default function PhotoGallery() {
   return (
     <GalleryContainer>
       <GalleryWrapper>
-        {pics.map((pic, index) => (
-          <PhotoCardWrapper key={index}>
-            <PhotoCard img={pic.image} mood={pic.moodName} />
-          </PhotoCardWrapper>
-        ))}
+        {pics ? (
+          pics.map((pic, index) => (
+            <PhotoCardWrapper key={index}>
+              <PhotoCard img={pic.image} mood={pic.moodName} />
+            </PhotoCardWrapper>
+          ))
+        ) : (
+          <NoPicturesWrapper>
+            <NoPicturesText>No pictures yet</NoPicturesText>
+            <NoPicturesImage src={sadCappy} alt="No pictures yet" />
+          </NoPicturesWrapper>
+        )}
       </GalleryWrapper>
     </GalleryContainer>
   );
@@ -48,3 +55,22 @@ const PhotoCardWrapper = styled.div`
     flex-basis: 50%; /* for smaller screens like phones, display 2 pictures per row */
   }
 `;
+
+const NoPicturesWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+`;
+
+const NoPicturesText = styled.p`
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+`;
+
+const NoPicturesImage = styled.img`
+  max-width: 50%;
+  margin-top: 20px;
+`;
+

@@ -1,18 +1,6 @@
 import React, { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import styled from 'styled-components';
-import angry from '../resources/icons/angry.png';
-import anxious from '../resources/icons/anxious.png';
-import confused from '../resources/icons/devastated.png';
-import devastated from '../resources/icons/confused.png';
-import lonely from '../resources/icons/lonely.png';
-import sad from '../resources/icons/sad.png';
-import shocked from '../resources/icons/shocked.png';
-import moody from '../resources/icons/moody.png';
-import loved from '../resources/icons/loved.png';
-import relaxed from '../resources/icons/relaxed.png';
-import happy from '../resources/icons/happy.png';
-import fantastic from '../resources/icons/fantastic.png';
 
 export default function PhotoCard({ img, mood }) {
   const [flipped, setFlipped] = useState(false);
